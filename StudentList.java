@@ -70,19 +70,12 @@ public static void main(String[] args) {
 			System.out.println("Loading data ...");			
 			try {
 			BufferedReader s = new BufferedReader(
-					new InputStreamReader(
-							new FileInputStream("students.txt"))); 
+					new InputStreamReader( new FileInputStream("students.txt"))); 
 			String D = s.readLine();
 			char a[] = D.toCharArray();			
 			boolean in_word = false;
 			int count=0;
-			for(char c:a) {
-				if(c ==' ') 
-				{
-					if (!in_word) {	count++; in_word =true;	}
-					else { in_word=false;}			
-				}
-			}
+			
 			System.out.println(count +" word(s) found " + a.length);
 			} catch (Exception e){} 
 			System.out.println("Data Loaded.");				
